@@ -3,7 +3,7 @@ from numpy.random import randn
 
 N, D_in, H, D_out = 64, 1000, 100, 10
 x, y = randn(N, D_in), randn(N, D_out)
-w1, w2 = randn(D_in, D_out), randn(D_out, D_out)
+w1, w2 = randn(D_in, H), randn(H, D_out)
 
 for i in range(2000):
     h = 1/(1+np.exp(-np.dot(x, w1)))
